@@ -1,0 +1,56 @@
+.card1 {
+    display: flex;
+    justify-content: center;
+}
+body {
+  margin: 0;
+  overflow: hidden;
+  background-color: white !important;
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slideInFromLeft 0.7s ease-out forwards;
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.8s ease-out 0.4s forwards;
+  opacity: 0; /* Para que esté invisible al inicio */
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in-right {
+  animation: slideInFromRight 0.7s ease-out forwards;
+}
+
