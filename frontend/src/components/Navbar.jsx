@@ -60,7 +60,7 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center md:order-1">
             <ul className="flex flex-col md:flex-row md:space-x-8 font-medium p-4 md:p-0 mt-4 rounded-lg bg-gray-50 md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent">
-            <li><a href="/" className="block py-2 px-3 text-black md:text-black dark:text-green-700">Home</a></li>
+            <li><a href="/BattleHome" className="block py-2 px-3 text-black md:text-black dark:text-green-700">Home</a></li>
             <li><a href="#" className="block py-2 px-3 text-black md:hover:text-black dark:text-black md:dark:text-green-700">Services</a></li>
             <li><a href="#" className="block py-2 px-3 text-black md:hover:text-black dark:text-black md:dark:text-green-700">Pricing</a></li>
             </ul>
