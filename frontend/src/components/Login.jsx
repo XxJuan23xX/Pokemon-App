@@ -64,7 +64,7 @@ const Login = () => {
 
               <div>
                 <label htmlFor="username" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  Usuario
+                  Usuari0
                 </label>
                 <input
                   type="text"
