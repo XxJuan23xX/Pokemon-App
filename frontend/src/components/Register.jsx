@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import RegisterImg from '../assets/register.jpg';
 import './Login.css';
+import Navbar from './Navbar';
 
 const Register = () => {
   const [formData, setFormData] = useState({
@@ -42,14 +43,15 @@ const Register = () => {
   };
 
   return (
-    <div>
-      <div className="w-screen h-screen flex justify-center items-start pt-24 overflow-hidden" style={{ backgroundColor: "#849fa6" }}>
-        <div className="flex flex-col md:flex-row w-[50%] max-w-4xl bg-white border border-gray-200 rounded-lg shadow-md dark:border-gray-700 overflow-hidden" style={{ backgroundColor: "#4f6d78" }}>
+    <div className="min-h-screen flex flex-col" style={{ backgroundColor: "#849fa6" }}>
+      <Navbar />
+      <div className="flex-grow flex items-center justify-center p-4 pt-24">
+        <div className="flex flex-col md:flex-row w-full max-w-4xl bg-white border border-gray-200 rounded-lg shadow-md dark:border-gray-700 overflow-hidden" style={{ backgroundColor: "#4f6d78" }}>
           
           {/* Formulario */}
           <div className="p-6 flex flex-col justify-center w-full animate-fade-in">
             <form className="space-y-6" onSubmit={handleSubmit}>
-              <h5 className="text-xl font-medium text-gray-900 dark:text-white">REGISTER</h5>
+              <h5 className="text-xl font-medium text-gray-900 dark:text-white">REGISTRATE</h5>
 
               <div>
                 <label htmlFor="username" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
@@ -68,7 +70,7 @@ const Register = () => {
 
               <div>
                 <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  Tu correo
+                  Correo electrónico
                 </label>
                 <input
                   type="email"

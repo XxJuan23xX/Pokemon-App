@@ -12,12 +12,22 @@ const Navbar = () => {
       // ✅ NAVBAR CUANDO ESTÁ LOGUEADO
       <nav className="bg-white border-gray-200 dark:bg-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+          {/* Logo a la izquierda */}
           <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="https://loodibee.com/wp-content/uploads/Pokemon-Symbol-logo.png" className="h-8" alt="PokeWar Logo" />
             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">PokeWar</span>
           </a>
 
-          {/* Botón de usuario y dropdown */}
+          {/* Menú de navegación en el centro */}
+          <div className="hidden md:flex items-center">
+            <ul className="flex flex-col md:flex-row md:space-x-8 font-medium p-4 md:p-0 mt-4 rounded-lg bg-gray-50 md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent">
+            <li><a href="/BattleHome" className="block py-2 px-3 text-black md:text-black dark:text-green-700">Home</a></li>
+            <li><a href="#" className="block py-2 px-3 text-black md:hover:text-black dark:text-black md:dark:text-green-700">Services</a></li>
+            <li><a href="#" className="block py-2 px-3 text-black md:hover:text-black dark:text-black md:dark:text-green-700">Pricing</a></li>
+            </ul>
+          </div>
+
+          {/* Botón de usuario y dropdown a la derecha */}
           <div className="relative">
             <button
               onClick={toggleDropdown}
@@ -56,14 +66,6 @@ const Navbar = () => {
                 </ul>
               </div>
             )}
-          </div>
-
-          <div className="hidden md:flex items-center md:order-1">
-            <ul className="flex flex-col md:flex-row md:space-x-8 font-medium p-4 md:p-0 mt-4 rounded-lg bg-gray-50 md:mt-0 md:border-0 md:bg-transparent dark:bg-gray-800 md:dark:bg-transparent">
-            <li><a href="/BattleHome" className="block py-2 px-3 text-black md:text-black dark:text-green-700">Home</a></li>
-            <li><a href="#" className="block py-2 px-3 text-black md:hover:text-black dark:text-black md:dark:text-green-700">Services</a></li>
-            <li><a href="#" className="block py-2 px-3 text-black md:hover:text-black dark:text-black md:dark:text-green-700">Pricing</a></li>
-            </ul>
           </div>
         </div>
       </nav>

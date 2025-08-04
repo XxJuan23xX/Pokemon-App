@@ -48,7 +48,7 @@ const Login = () => {
       
       {/* Contenido principal centrado */}
       <div className="flex-grow flex items-center justify-center p-4 pt-24">
-        <div className="flex flex-col md:flex-row w-full max-w-4xl bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden" style={{ backgroundColor: '#4f6d78' }}>
+        <div className="flex flex-col md:flex-row w-full max-w-4xl bg-white border  rounded-lg shadow-md overflow-hidden" style={{ backgroundColor: '#4f6d78' }}>
 
           {/* Imagen */}
           <img
@@ -60,11 +60,11 @@ const Login = () => {
           {/* Formulario */}
           <div className="p-6 flex flex-col justify-center w-full animate-fade-in">
             <form className="space-y-6" onSubmit={handleSubmit}>
-              <h5 className="text-xl font-medium text-gray-900 dark:text-white">Sign in to our platform</h5>
+              <h5 className="text-xl font-medium text-gray-900 dark:text-white">BIENVENIDO A POKEWAR</h5>
 
               <div>
                 <label htmlFor="username" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  Username
+                  Usuario
                 </label>
                 <input
                   type="text"
@@ -79,7 +79,7 @@ const Login = () => {
 
               <div>
                 <label htmlFor="password" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                  Your password
+                  Contraseña
                 </label>
                 <input
                   type="password"
@@ -96,14 +96,14 @@ const Login = () => {
                 type="submit"
                 className="w-full text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-lg text-sm px-5 py-2.5"
               >
-                Login to your account
+                Iniciar sesión
               </button>
 
               {mensaje && <p className="text-sm mt-2 text-white">{mensaje}</p>}
 
               <p className="text-sm font-medium text-gray-300">
-                Not registered?{' '}
-                <a href="/Register" className="text-blue-400 hover:underline">Create account</a>
+                No tienes una cuenta?{' '}
+                <a href="/Register" className="text-blue-400 hover:underline">Crea tu cuenta</a>
               </p>
             </form>
           </div>
