@@ -9,7 +9,7 @@ import metagrossGif from '../assets/pokemon-gifs/metagross.gif'; // Cambiado de 
 import dragoniteGif from '../assets/pokemon-gifs/dragonite.gif';
 import lugiaGif from '../assets/pokemon-gifs/lugiax.gif';
 import hoOhGif from '../assets/pokemon-gifs/ho-oh.gif';
-import rayquazaGif from '../assets/pokemon-gifs/rayquaza.gif'; // Cambiado de mewtwox.gif a rayquaza.gif
+import rayquazaGif from '../assets/pokemon-gifs/rayquazax.gif'; // Cambiado de mewtwox.gif a rayquaza.gif
 import waitGif from '../assets/pokemon-gifs/pikachu-running.gif';
 import Pikachu from '../assets/Pikachu.png';
 import Pokeball from '../assets/pokemon-gifs/pokeball.gif';
