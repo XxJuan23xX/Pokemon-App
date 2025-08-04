@@ -5,11 +5,11 @@ import venusaurGif from '../assets/pokemon-gifs/venusaurx.gif';
 import blastoiseGif from '../assets/pokemon-gifs/blastoise.gif';
 import pikachuGif from '../assets/pokemon-gifs/pikachu.gif';
 import gengarGif from '../assets/pokemon-gifs/gengar.gif';
-import snorlaxGif from '../assets/pokemon-gifs/metagross.gif';
+import metagrossGif from '../assets/pokemon-gifs/metagross.gif'; // Cambiado de metagross.gif a snorlax.gif
 import dragoniteGif from '../assets/pokemon-gifs/dragonite.gif';
 import lugiaGif from '../assets/pokemon-gifs/lugiax.gif';
 import hoOhGif from '../assets/pokemon-gifs/ho-oh.gif';
-import mewtwoGif from '../assets/pokemon-gifs/mewtwox.gif';
+import rayquazaGif from '../assets/pokemon-gifs/rayquaza.gif'; // Cambiado de mewtwox.gif a rayquaza.gif
 import waitGif from '../assets/pokemon-gifs/pikachu-running.gif';
 import Pikachu from '../assets/Pikachu.png';
 import Pokeball from '../assets/pokemon-gifs/pokeball.gif';
@@ -23,11 +23,11 @@ const Home = () => {
     blastoise: 9,
     pikachu: 25,
     gengar: 94,
-    snorlax: 143,
+    metagross: 376, // Mantenido igual (ya era Snorlax)
     dragonite: 149,
     lugia: 249,
     hooh: 250,
-    mewtwo: 150
+    rayquaza: 384 // Cambiado de mewtwo (150) a rayquaza (384)
   };
 
   const pokemonGifs = {
@@ -36,18 +36,17 @@ const Home = () => {
     blastoise: blastoiseGif,
     pikachu: pikachuGif,
     gengar: gengarGif,
-    snorlax: snorlaxGif,
+    metagross: metagrossGif, // Cambiado de metagross a snorlax
     dragonite: dragoniteGif,
     lugia: lugiaGif,
     'ho-oh': hoOhGif,
-    mewtwo: mewtwoGif
+    rayquaza: rayquazaGif // Cambiado de mewtwo a rayquaza
   };
 
   const [selectedPokemon, setSelectedPokemon] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [pokemonData, setPokemonData] = useState([]); // Cambiado a array
+  const [pokemonData, setPokemonData] = useState([]);
   const [currentGif, setCurrentGif] = useState(null);
-  
 
   // Función para cargar los datos de los Pokémon
   const fetchPokemonData = async () => {
@@ -91,18 +90,19 @@ const Home = () => {
   return (
     <div className="bg-white min-h-screen flex flex-col">
       {/* Speed Dial para regresar al menú */}
-     <SpeedDial></SpeedDial>
-     {/*RESTO DE LA PÁGINA*/}
-     <h1 className="text-3xl font-mono text-center p-4 flex items-center justify-center gap-2">
-  Selecciona tu personaje 
-  <img 
-    src={Pokeball} 
-    alt="Pokeball" 
-    className="h-12 w-12 object-contain" 
-  />
-</h1>
+      <SpeedDial />
+      
+      <h1 className="text-3xl font-mono text-center p-4 flex items-center justify-center gap-2">
+        Selecciona tu personaje 
+        <img 
+          src={Pokeball} 
+          alt="Pokeball" 
+          className="h-12 w-12 object-contain" 
+        />
+      </h1>
+
       {/* Parte superior dividida en 2 secciones */}
-      <div className="flex flex-col md:flex-row pl-6">
+      <div className="flex flex-col md:flex-row pl-43">
         {/* Sección izquierda con contador y seleccionados */}
         <div className="w-full md:w-1/2 pr-0 md:pr-6">
           <div className="mb-4">
@@ -148,27 +148,27 @@ const Home = () => {
         
         {/* Sección derecha con el GIF del Pokémon */}
         <div className="w-full md:w-1/2 mt-6 md:mt-0 flex items-center justify-center">
-  {currentGif ? (
-    <div className="bg-transparent p-1 w-full h-[300px] flex items-center justify-center"> {/* Aumenté la altura */}
-      <img 
-        src={currentGif} 
-        alt="Pokémon animado" 
-        className="max-h-[380px] max-w-full object-contain" /* Aumenté el tamaño máximo */
-      />
-    </div>
-  ) : (
-    <div className="bg-transparent p-1 w-full h-[300px] flex items-center justify-center">
-      <img 
-        src={waitGif} 
-        alt="Pikachu running" 
-        className="max-h-[380px] max-w-full object-contain"
-      />
-    </div>
-  )}
-</div>
+          {currentGif ? (
+            <div className="bg-transparent p-1 w-full h-[300px] flex items-center justify-center">
+              <img 
+                src={currentGif} 
+                alt="Pokémon animado" 
+                className="max-h-[380px] max-w-full object-contain" 
+              />
+            </div>
+          ) : (
+            <div className="bg-transparent p-1 w-full h-[300px] flex items-center justify-center">
+              <img 
+                src={waitGif} 
+                alt="Pikachu running" 
+                className="max-h-[380px] max-w-full object-contain"
+              />
+            </div>
+          )}
+        </div>
       </div>
 
-    {/* Grid de Pokémon en la parte inferior */}
+      {/* Grid de Pokémon en la parte inferior */}
       <div className="mt-auto p-6 bg-transparent">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4 max-w-[80%] mx-auto">
           {pokemonData.map((pokemon) => (
@@ -183,7 +183,7 @@ const Home = () => {
             >
               {pokemon.name === 'pikachu' ? (
                 <img 
-                  src={Pikachu}  // Cambiado de pikachuImage a Pikachu
+                  src={Pikachu}
                   alt={pokemon.name} 
                   className="w-full h-24 object-contain mx-auto" 
                 />
@@ -194,7 +194,6 @@ const Home = () => {
                   className="w-full h-24 object-contain mx-auto" 
                 />
               )}
-              
             </div>
           ))}
         </div>
